@@ -4,7 +4,6 @@
     --text-main: #f5f5f5;
     --text-muted: #a0a0a0;
     --accent-yellow: #FFD700;
-    --accent-red: #ff4747;
     --glass-bg: rgba(30, 30, 30, 0.8);
     --glass-border: rgba(255, 255, 255, 0.1);
 }
@@ -38,7 +37,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(18,18,18,1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(18, 18, 18, 1) 100%);
     z-index: 1;
 }
 
@@ -87,13 +86,16 @@ body {
     padding: 12px 0;
     overflow-x: auto;
     white-space: nowrap;
-    scrollbar-width: none; /* Firefox */
-    -webkit-overflow-scrolling: touch; /* Suave no iOS */
+    scrollbar-width: none;
+    /* Firefox */
+    -webkit-overflow-scrolling: touch;
+    /* Suave no iOS */
     scroll-snap-type: x mandatory;
 }
 
 .category-nav::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
+    /* Chrome/Safari */
 }
 
 .nav-list {
@@ -113,14 +115,17 @@ body {
     color: var(--text-muted);
     font-weight: 500;
     font-size: 0.95rem;
-    padding: 10px 20px; /* Alvo de toque maior para mobile */
-    border-radius: 25px; /* Mais arredondado, estilo app */
+    padding: 10px 20px;
+    /* Alvo de toque maior para mobile */
+    border-radius: 25px;
+    /* Mais arredondado, estilo app */
     transition: all 0.2s ease;
     border: 1px solid var(--glass-border);
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-.nav-list li a.active, .nav-list li a:hover {
+.nav-list li a.active,
+.nav-list li a:hover {
     color: var(--bg-dark);
     background-color: var(--accent-yellow);
     border-color: var(--accent-yellow);
@@ -149,18 +154,27 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    background-color: var(--bg-card); /* fallback */
+    background-color: var(--bg-card);
+    /* fallback */
 }
 
 /* Fallback colors if no image */
-.caldinhos-bg { background: linear-gradient(45deg, #1e1e1e, #2a2a2a); }
-.tiragosto-bg { background: linear-gradient(45deg, #2a1e1e, #1e1e1e); }
-.sobremesas-bg { background: linear-gradient(45deg, #1e2a1e, #1e1e1e); }
+.caldinhos-bg {
+    background: linear-gradient(45deg, #1e1e1e, #2a2a2a);
+}
+
+.tiragosto-bg {
+    background: linear-gradient(45deg, #2a1e1e, #1e1e1e);
+}
+
+.sobremesas-bg {
+    background: linear-gradient(45deg, #1e2a1e, #1e1e1e);
+}
 
 .section-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -169,7 +183,7 @@ body {
     z-index: 2;
     font-size: 2rem;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -204,12 +218,14 @@ body {
     justify-content: space-between;
     align-items: center;
     transition: transform 0.15s ease, background-color 0.15s ease;
-    -webkit-tap-highlight-color: transparent; /* Remove brilho de clique no mobile */
+    -webkit-tap-highlight-color: transparent;
+    /* Remove brilho de clique no mobile */
 }
 
 .menu-item:active {
     transform: scale(0.96);
-    background-color: rgba(255, 255, 255, 0.05); /* Feedback visual de clique */
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Feedback visual de clique */
 }
 
 .highlight-item {
