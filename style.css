@@ -271,3 +271,126 @@ body {
 .footer p {
     margin-bottom: 5px;
 }
+
+/* LISTA DE BEBIDAS (ESTILO CARDÁPIO COM PONTINHOS) */
+.drinks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 20px 15px;
+    margin-bottom: 24px;
+}
+
+.drink-row {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+}
+
+.drink-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.drink-dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.3);
+    margin: 0 10px;
+    position: relative;
+    top: -4px;
+}
+
+.drink-price {
+    font-weight: 700;
+    color: var(--accent-yellow);
+    font-size: 1.1rem;
+    white-space: nowrap;
+}
+
+/* MULTI COLUNAS (DOSE, MEIOTA, LITRO) */
+.drinks-table-header {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.drink-name-header {
+    flex-grow: 1;
+}
+
+.drink-col-header {
+    width: 65px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.drink-row-multi {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+}
+
+.drink-price-col {
+    width: 65px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--accent-yellow);
+    font-size: 1rem;
+    white-space: nowrap;
+    margin-left: 5px;
+}
+
+@media (max-width: 450px) {
+    .drink-name {
+        font-size: 0.85rem;
+        white-space: normal;
+        max-width: 55%;
+    }
+    .drink-price {
+        font-size: 0.95rem;
+    }
+    .drink-col-header, .drink-price-col {
+        width: 50px;
+        font-size: 0.85rem;
+    }
+    .drink-col-header {
+        font-size: 0.65rem;
+    }
+}
+
+.drink-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: -2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.flavors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+}
