@@ -286,7 +286,7 @@ body {
 
 .drink-row {
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
     width: 100%;
 }
 
@@ -296,14 +296,22 @@ body {
     color: #fff;
     white-space: nowrap;
     text-transform: uppercase;
+    overflow: hidden;
+}
+
+.drink-name::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    margin-right: -100%;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.3);
 }
 
 .drink-dots {
-    flex-grow: 1;
+    flex: 1 1 15px;
+    min-width: 15px;
     border-bottom: 2px dotted rgba(255, 255, 255, 0.3);
-    margin: 0 10px;
-    position: relative;
-    top: -4px;
+    margin: 0 5px 4px 5px;
 }
 
 .drink-price {
@@ -311,6 +319,7 @@ body {
     color: var(--accent-yellow);
     font-size: 1.1rem;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* MULTI COLUNAS (DOSE, MEIOTA, LITRO) */
@@ -337,11 +346,12 @@ body {
     padding: 4px;
     border-radius: 4px;
     margin-left: 5px;
+    flex-shrink: 0;
 }
 
 .drink-row-multi {
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
     width: 100%;
 }
 
@@ -353,13 +363,15 @@ body {
     font-size: 1rem;
     white-space: nowrap;
     margin-left: 5px;
+    flex-shrink: 0;
 }
 
 @media (max-width: 450px) {
     .drink-name {
         font-size: 0.85rem;
         white-space: normal;
-        max-width: 55%;
+        line-height: 1.2;
+        word-break: break-word;
     }
     .drink-price {
         font-size: 0.95rem;
@@ -367,6 +379,7 @@ body {
     .drink-col-header, .drink-price-col {
         width: 50px;
         font-size: 0.85rem;
+        flex-shrink: 0;
     }
     .drink-col-header {
         font-size: 0.65rem;
