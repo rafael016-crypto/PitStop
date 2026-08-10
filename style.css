@@ -299,14 +299,6 @@ body {
     overflow: hidden;
 }
 
-.drink-name::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    margin-right: -100%;
-    border-bottom: 2px dotted rgba(255, 255, 255, 0.3);
-}
-
 .drink-dots {
     flex: 1 1 15px;
     min-width: 15px;
