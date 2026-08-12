@@ -399,3 +399,13 @@ body {
     font-weight: 500;
     text-transform: uppercase;
 }
+
+.observation-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+    padding-top: 10px;
+    font-style: italic;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
